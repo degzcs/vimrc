@@ -18,6 +18,8 @@ syntax on
 
 set foldmethod=diff
 
+set autoread
+
 ""VIM-JSX
 
 ""let g:jsx_ext_required = 0
@@ -25,6 +27,27 @@ set foldmethod=diff
 ""let g:xml_syntax_folding = 0
 
 ""vim-colors-solarized
+
+" Default mapping
+let g:multi_cursor_next_key='<C-n>'
+let g:multi_cursor_prev_key='<C-p>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<Esc>'
+
+" Called once right before you start selecting multiple cursors
+function! Multiple_cursors_before()
+  if exists(':NeoCompleteLock')==2
+    exe 'NeoCompleteLock'
+  endif
+endfunction
+
+" Called once only when the multiple selection is canceled (default <Esc>)
+function! Multiple_cursors_after()
+  if exists(':NeoCompleteUnlock')==2
+    exe 'NeoCompleteUnlock'
+  endif
+endfunction
+
 
 syntax enable
 
@@ -41,7 +64,21 @@ vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv 
 
 "" Auto Save
-let g:auto_save = 1  " enable AutoSave on Vim startup
+let g:auto_save = 0  " enable AutoSave on Vim startup
+nmap <c-s> :w<CR>
+vmap <c-s> <Esc><c-s>gv
+imap <c-s> <Esc><c-s>
+
+nmap <F2> :update<CR>
+vmap <F2> <Esc><F2>gv
+imap <F2> <c-o><F2>
+
+"" Paste config
+set pastetoggle=<F3>
+
+"" Close tabs
+nmap <c-w> :q<CR>
+vmap <c-w> :q<CR>
 
 ""colorscheme solarized
 
