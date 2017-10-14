@@ -77,8 +77,8 @@ imap <F2> <c-o><F2>
 set pastetoggle=<F3>
 
 "" Close tabs
-nmap <c-w> :q<CR>
-vmap <c-w> :q<CR>
+nmap <c-s-z> :q<CR>
+vmap <c-s-z> :q<CR>
 
 ""colorscheme solarized
 
