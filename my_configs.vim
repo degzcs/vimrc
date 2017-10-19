@@ -54,14 +54,15 @@ syntax enable
 set background=dark
 
 "" Move lines
-noremap <c-s-up> :call feedkeys( line('.')==1 ? '' : 'ddkP' )<CR>
-noremap <c-s-down> ddp
-nnoremap <A-j> :m .+1<CR>==
-nnoremap <A-k> :m .-2<CR>==
-inoremap <A-j> <Esc>:m .+1<CR>==gi
-inoremap <A-k> <Esc>:m .-2<CR>==gi
-vnoremap <A-j> :m '>+1<CR>gv=gv
-vnoremap <A-k> :m '<-2<CR>gv=gv 
+let g:move_key_modifier = 'c-s'
+
+"" Indent
+nnoremap <Tab> >>_
+nnoremap <S-Tab> <<_
+inoremap <S-Tab> <C-D>
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
+
 
 "" Auto Save
 let g:auto_save = 0  " enable AutoSave on Vim startup
