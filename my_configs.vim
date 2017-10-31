@@ -20,6 +20,8 @@ set foldmethod=diff
 
 set autoread
 
+"" Use the silver seracher or ag
+let g:ackprg='ag --vimgrep'
 ""VIM-JSX
 
 ""let g:jsx_ext_required = 0
