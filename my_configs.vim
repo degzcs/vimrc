@@ -153,9 +153,9 @@ let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.js,*.jsx"
 
 let g:closetag_html_style=1
 
-noremap <C-L> :tabp<cr>
+noremap <C-H> :tabp<cr>
 
-noremap <C-H> :tabn<cr>
+noremap <C-L> :tabn<cr>
 
 ""noremap <C-J> :call JsBeautify()<cr>
 ""
