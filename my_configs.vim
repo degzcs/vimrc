@@ -56,7 +56,7 @@ syntax enable
 set background=dark
 
 "" Move lines
-let g:move_key_modifier = 'c-s'
+let g:move_key_modifier = 'c-s-A'
 
 "" Indent
 nnoremap <Tab> >>_
@@ -153,18 +153,18 @@ let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.js,*.jsx"
 
 let g:closetag_html_style=1
 
-noremap <C-Left> :tabp<cr>
+noremap <C-L> :tabp<cr>
 
-noremap <C-Right> :tabn<cr>
+noremap <C-H> :tabn<cr>
 
-noremap <C-J> :call JsBeautify()<cr>
-
-noremap <C-H> :call RangeHtmlBeautify()<cr>
-
-noremap <C-X> :call RangeJsxBeautify()<cr>
-
-noremap <C-C> :call RangeCSSBeautify()<cr>
-
+""noremap <C-J> :call JsBeautify()<cr>
+""
+""noremap <C-H> :call RangeHtmlBeautify()<cr>
+""
+""noremap <C-X> :call RangeJsxBeautify()<cr>
+""
+""noremap <C-C> :call RangeCSSBeautify()<cr>
+""
 nmap <F8> :TagbarToggle<CR>
 
 nmap <F4> :set invnumber<cr>
