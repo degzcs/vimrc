@@ -56,7 +56,7 @@ syntax enable
 set background=dark
 
 "" Move lines
-let g:move_key_modifier = 'c-s-A'
+let g:move_key_modifier = 'c-s'
 
 "" Indent
 nnoremap <Tab> >>_
@@ -153,9 +153,10 @@ let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.js,*.jsx"
 
 let g:closetag_html_style=1
 
-noremap <C-H> :tabp<cr>
+"" Go to next and previous tab
+noremap <C-h> :tabp<cr>
 
-noremap <C-L> :tabn<cr>
+noremap <C-l> :tabn<cr>
 
 ""noremap <C-J> :call JsBeautify()<cr>
 ""
@@ -171,9 +172,11 @@ nmap <F4> :set invnumber<cr>
 
 noremap <F12> :!bash<cr>
 
-noremap <A-Left>  :-tabmove<cr>
+"" Move tabs
 
-noremap <A-Right> :+tabmove<cr>
+noremap <S-h>  :-tabmove<cr>
+
+noremap <S-l> :+tabmove<cr>
 
 ""let g:python_pep8_indent_multiline_string = 1
 
