@@ -20,6 +20,11 @@ set foldmethod=diff
 
 set autoread
 
+"" NEEDTree
+map <leader>nn :NERDTreeToggle<cr>
+map <leader>nb :NERDTreeFromBookmark 
+map <leader>nf :NERDTreeFind<cr>
+
 "" Use the silver seracher or ag
 let g:ackprg='ag --vimgrep'
 ""VIM-JSX
@@ -130,6 +135,18 @@ autocmd FileType jsx vnoremap <buffer> <c-a> :call RangeJsxBeautify()<cr>
 autocmd FileType html vnoremap <buffer> <c-a> :call RangeHtmlBeautify()<cr>
 
 autocmd FileType css vnoremap <buffer> <c-a> :call RangeCSSBeautify()<cr>
+
+" Define keyword.
+"if !exists('g:neocomplete#keyword_patterns')
+"    let g:neocomplete#keyword_patterns = {}
+"endif
+"let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+
+" Plugin key-mappings.
+inoremap <expr><C-g>     neocomplete#undo_completion()
+inoremap <expr><C-l>     neocomplete#complete_common_string()
+""inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 ""et g:clang_format#style_options = {
 ""
