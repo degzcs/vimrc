@@ -35,6 +35,7 @@ let g:syntastic_check_on_wq = 0
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark
 map <leader>nf :NERDTreeFind<cr>
+let g:NERDTreeWinPos = "left"
 
 "" Use the silver seracher or ag
 let g:ackprg='ag --vimgrep'
