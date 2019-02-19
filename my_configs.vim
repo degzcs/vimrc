@@ -75,7 +75,8 @@ let g:move_key_modifier = 'c-s'
 " Indent
 nnoremap <Tab> >>_
 nnoremap <S-Tab> <<_
-noremap <S-Tab> <gv
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
 
 " Git
 let g:gitgutter_enabled = 1
